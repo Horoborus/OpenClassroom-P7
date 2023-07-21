@@ -1,0 +1,63 @@
+@import "../Utils/Variables.scss";
+.ratings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.ratings__stars {
+  display: flex;
+  width: 70%;
+}
+.svg-inline--fa.fa-star {
+  padding-right: 10px;
+}
+.filled {
+  color: $color-primary; /* Modifiez color stars remplie*/
+}
+.empty {
+  color: #e3e3e3; /* Modifiez color stars empty*/
+}
+.ratings__user {
+  display: flex;
+  width: 40%;
+  justify-content: flex-end;
+}
+.rating__nom {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  text-align: center;
+  padding: 10px;
+  color: $color-primary;
+}
+.rating__photo {
+  border-radius: 50%;
+  height: 70px;
+}
+
+@media (min-width: 768px) {
+  .ratings {
+    width: 20%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+  }
+  .ratings__user {
+    width: 18%;
+  }
+
+  .rating__nom {
+    justify-content: flex-end;
+    width: 60%;
+  }
+  .ratings__stars {
+    justify-content: flex-end;
+  }
+  .svg-inline--fa.fa-star {
+    padding-right: 0px;
+    padding-left: 5px;
+  }
+}

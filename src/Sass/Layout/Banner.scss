@@ -1,0 +1,84 @@
+/* Banner */
+@import "../Utils/Variables.scss";
+
+.banner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  &__background {
+    position: relative;
+    width: 90%;
+    border-radius: $border-radius-m;
+    background: $full-dark;
+    mix-blend-mode: darken;
+    height: 110px;
+
+    &.wide {
+      height: 220px;
+    }
+    img {
+      position: relative;
+      width: 100%;
+      border-radius: $border-radius-m;
+      opacity: 0.7;
+      object-fit: cover;
+      height: 110px;
+    }
+  }
+  img.wide {
+    height: 220px;
+  }
+  & h1 {
+    display: block;
+    position: absolute;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    color: $only-white;
+    text-align: start;
+    width: 80%;
+    top: 15px;
+  }
+}
+
+@media (min-width: 350px) {
+  .banner h1 {
+    text-align: start;
+    top: 10%;
+  }
+}
+/* Media Tablete */
+@media (min-width: 620px) {
+  .banner {
+    &__background {
+      border-radius: $border-radius-l;
+
+      & img {
+        border-radius: $border-radius-l;
+        object-fit: center;
+      }
+    }
+    & h1 {
+      font-size: $font-size-xl;
+      text-align: center;
+      top: 10%;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .banner__background {
+    height: 220px;
+    img {
+      height: 220px;
+    }
+  }
+  .banner h1 {
+    top: 25%;
+    font-size: 48px;
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,31 @@
+.collapse {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 20px;
+  gap: 5px;
+}
+.collapse__bar {
+  display: flex;
+  height: 30px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  background-color: #ff6060;
+  color: #f7f7f7;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+.collapse__bar-title {
+  font-size: 14px;
+}
+.collapse__arrow-down {
+  height: 16px;
+  cursor: pointer;
+}
+.collapse__arrow-up {
+  position: absolute;
+  height: 16px;
+  opacity: 0;
+}/*# sourceMappingURL=Collapse.css.map */

@@ -1,0 +1,20 @@
+@import "../Utils/Variables.scss";
+
+.footer {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background: $full-dark;
+  width: 100%;
+  height: 220px;
+
+  &__logo img {
+    height: 40px;
+    width: 150px;
+  }
+  &__rights img {
+    height: 40px;
+    width: 230px;
+  }
+}

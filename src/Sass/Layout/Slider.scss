@@ -1,0 +1,64 @@
+@import "/src/Sass/Utils/Variables.scss";
+
+.carousel {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel__container {
+  position: relative;
+  display: flex;
+  width: 90%;
+  height: 220px;
+  justify-content: space-between;
+  background-color: $color-primary;
+  border-radius: 10px;
+}
+.carousel__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.carousel__btn-next {
+  position: absolute;
+  font-size: 30px;
+  color: $only-white;
+  cursor: pointer;
+  right: 10px;
+  top: 75px;
+  background-color: transparent;
+  border: none;
+}
+.carousel__btn-prev {
+  position: absolute;
+  font-size: 30px;
+  color: $only-white;
+  cursor: pointer;
+  left: 10px;
+  top: 75px;
+  background-color: transparent;
+  border: none;
+}
+
+/* Ajuster le style au différentes tailles d'écran */
+
+@media (min-width: 768px) {
+  .carousel__container {
+    height: 415px;
+  }
+
+  .carousel__image {
+    height: 415px;
+  }
+  .carousel__btn-next {
+    top: 170px;
+  }
+  .carousel__btn-prev {
+    top: 170px;
+  }
+}

@@ -1,0 +1,81 @@
+@import "../Utils/Variables.scss";
+
+.collapse {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0px 20px;
+  gap: 15px;
+  height: 67vh;
+
+  &__bar {
+    display: flex;
+    height: 30px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    background-color: $color-primary;
+    color: $only-white;
+    border-radius: $border-radius-s;
+    padding: 0 10px;
+    &-title {
+      font-size: $font-size-s;
+    }
+    &-content {
+      background-color: #f5f5f5;
+      color: #ff6060;
+      border-radius: 5px;
+      padding: 5px 10px;
+    }
+    &-content h3 {
+      font-size: 12px;
+      font-weight: 400;
+    }
+  }
+  &__arrow-down {
+    height: 16px;
+    cursor: pointer;
+  }
+  &__arrow-up {
+    position: absolute;
+    height: 16px;
+    opacity: 0;
+  }
+}
+// Collapse Apartement
+.collapse__apartement {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 12px 20px 20px 20px;
+}
+
+// Media
+
+@media (min-width: 768px) {
+  .collapse {
+    align-items: center;
+    height: 100vh;
+    .collapse__container {
+      width: 85%;
+      align-items: center;
+    }
+    .collapse__bar-content h3 {
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+
+  // Collappse Apartement
+  .collapse__apartement {
+    display: flex;
+    padding: 0 5%;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  .collapse__container {
+    width: 45%;
+  }
+}

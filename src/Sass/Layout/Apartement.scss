@@ -1,0 +1,39 @@
+@import "../Utils/Variables.scss";
+
+.apartement {
+  padding: 0 5%;
+}
+.apartement__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  & h2 {
+    color: $color-primary;
+    font-size: $font-size-m;
+    font-weight: 500;
+    line-height: 26px;
+  }
+  & p {
+    color: $color-primary;
+    font-size: $font-size-s;
+    font-weight: 500;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .apartement {
+    display: flex;
+  }
+
+  .apartement__container {
+    width: 80%;
+  }
+  .apartement__container h2 {
+    font-size: 36px;
+  }
+  .apartement__container p {
+    font-size: 16px;
+  }
+}

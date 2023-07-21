@@ -1,0 +1,25 @@
+// Coleurs
+$color-primary: #ff6060;
+$color-secondary: #863535;
+$color-gardient: linear-gradient(
+  180deg,
+  rgb(255, 96, 96) 0%,
+  rgba(134, 53, 53) 100%
+);
+$background-color: #f7f7f7;
+$silver-gray: #f6f6f6;
+$only-white: #f7f7f7;
+$full-dark: #000000;
+
+//Police
+$font-size-xs: 12px;
+$font-size-s: 14px;
+$font-size-m: 18px;
+$font-size-l: 24px;
+$font-size-xl: 36px;
+$font-size-xxl: 96px;
+
+//Border Radius
+$border-radius-s: 5px;
+$border-radius-m: 10px;
+$border-radius-l: 20px;
