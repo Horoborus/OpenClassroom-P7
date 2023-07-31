@@ -1,17 +1,14 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../Sass/Layout/Ratings.scss";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 function Ratings({ name, picture, rating = 0 }) {
   const normalisedRating = Math.min(Math.max(rating, 0), 5);
+  const filledStar = "\u2605";
 
   const filledStars = Array.from({ length: 5 }, (_, index) => (
-    <FontAwesomeIcon
-      key={index}
-      icon={faStar}
-      className={index < normalisedRating ? "filled" : "empty"}
-    />
+    <span key={index} className={index < normalisedRating ? "filled" : "empty"}>
+      {filledStar}
+    </span>
   ));
 
   return (

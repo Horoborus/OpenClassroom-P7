@@ -24,7 +24,7 @@ function Navbar() {
           !isMenuOpen ? "inactive" : ""
         }`}
       >
-        <NavLink to="/" exact>
+        <NavLink to="/">
           <div className={location.pathname === "/" ? "active" : ""}>
             Accueil
           </div>
