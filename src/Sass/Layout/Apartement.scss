@@ -13,12 +13,14 @@
     font-size: $font-size-m;
     font-weight: 500;
     line-height: 26px;
+    margin: 5px 0px;
   }
   & p {
     color: $color-primary;
     font-size: $font-size-s;
     font-weight: 500;
     line-height: 20px;
+    margin: 5px 0px;
   }
 }
 
@@ -29,11 +31,13 @@
 
   .apartement__container {
     width: 80%;
+    padding: 20px 0px;
   }
   .apartement__container h2 {
-    font-size: 36px;
+    font-size: 33px;
   }
   .apartement__container p {
     font-size: 16px;
+    margin: 10px 0px;
   }
 }

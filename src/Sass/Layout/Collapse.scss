@@ -4,9 +4,8 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 20px 20px;
+  padding: 30px 20px;
   gap: 15px;
-  height: 67vh;
 
   &__bar {
     display: flex;
@@ -26,11 +25,20 @@
       background-color: #f5f5f5;
       color: #ff6060;
       border-radius: 5px;
-      padding: 5px 10px;
+      padding: 1px 10px;
+      height: 150px;
     }
     &-content h3 {
       font-size: 12px;
       font-weight: 400;
+    }
+    &-content ul {
+      padding: 0;
+    }
+    &-content li {
+      list-style: none;
+      font-size: 12px;
+      padding: 1px 0;
     }
   }
   &__arrow-down {
@@ -56,7 +64,7 @@
 @media (min-width: 768px) {
   .collapse {
     align-items: center;
-    height: 100vh;
+
     .collapse__container {
       width: 85%;
       align-items: center;
@@ -77,5 +85,14 @@
   }
   .collapse__container {
     width: 45%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .collapse__bar-content h3 {
+    font-size: 18px;
+  }
+  .collapse__bar-content li {
+    font-size: 18px;
   }
 }

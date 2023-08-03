@@ -4,6 +4,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  height: 60px;
 }
 .ratings__stars {
   display: flex;
@@ -32,6 +33,7 @@
   text-align: center;
   padding: 10px;
   color: $color-primary;
+  text-align: end;
 }
 .rating__photo {
   border-radius: 50%;
@@ -40,10 +42,10 @@
 
 @media (min-width: 768px) {
   .ratings {
+    height: auto;
     width: 20%;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0px;
     flex-direction: column-reverse;
     align-items: flex-end;
   }
@@ -57,6 +59,8 @@
   }
   .ratings__stars {
     justify-content: flex-end;
+    font-size: 25px;
+    padding-bottom: 30px;
   }
   .svg-inline--fa.fa-star {
     padding-right: 0px;

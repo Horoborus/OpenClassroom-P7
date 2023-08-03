@@ -55,6 +55,7 @@ const ApartmentPage = () => {
       </div>
       <div className="collapse__apartement">
         <Collapse title="Description" content={logement.description} />
+
         <Collapse title="Equipements" content={logement.equipments} />
       </div>
       <Footer />
