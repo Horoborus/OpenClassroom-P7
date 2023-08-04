@@ -26,7 +26,6 @@
       color: #ff6060;
       border-radius: 5px;
       padding: 1px 10px;
-      height: 150px;
     }
     &-content h3 {
       font-size: 12px;
@@ -56,7 +55,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 12px 20px 20px 20px;
+  padding: 13px 13px 20px 13px;
 }
 
 // Media
@@ -74,7 +73,9 @@
       font-weight: 500;
     }
   }
-
+  .collapse__bar-content.same {
+    height: 170px;
+  }
   // Collappse Apartement
   .collapse__apartement {
     display: flex;
@@ -94,5 +95,11 @@
   }
   .collapse__bar-content li {
     font-size: 18px;
+  }
+  .collapse__bar {
+    height: 50px;
+  }
+  .collapse__bar-title {
+    font-size: $font-size-s;
   }
 }

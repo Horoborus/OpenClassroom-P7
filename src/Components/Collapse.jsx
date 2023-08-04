@@ -7,7 +7,7 @@ import ArrowUp from "../Assets/ChevronUp.png";
 import ArrowDown from "../Assets/ChevronDown.png";
 
 // Composant Collapse
-const Collapse = ({ content, title }) => {
+const Collapse = ({ content, title, size }) => {
   const list = content;
   // Déclaration d'un état local "isOpen" pour gérer l'état du contenu pliable (ouvert ou fermé)
   const [isOpen, setIsOpen] = useState(false);
@@ -37,7 +37,7 @@ const Collapse = ({ content, title }) => {
 
       {/* Condition pour afficher le contenu pliable uniquement si "isOpen" est vrai */}
       {isOpen && (
-        <div className="collapse__bar-content">
+        <div className={`collapse__bar-content ${size}`}>
           {/* Vérifier si "list" est défini et qu'il s'agit d'un tableau */}
           {list && Array.isArray(list) ? (
             /* Affichage du contenu des équipements sous forme de liste à puces */
@@ -57,5 +57,5 @@ const Collapse = ({ content, title }) => {
   );
 };
 
-// Exportation du composant Collapse pour qu'il puisse être utilisé ailleurs
+// Exportation du composant Collapse
 export default Collapse;

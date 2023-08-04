@@ -12,7 +12,7 @@ import Collapse from "../Components/Collapse";
 const ApartmentPage = () => {
   const { id } = useParams();
   const [logement, setLogement] = useState(null);
-
+  const size = "same";
   useEffect(() => {
     // Récupère le fichier JSON
     fetch("/Data/logements.json")
@@ -54,9 +54,17 @@ const ApartmentPage = () => {
         />
       </div>
       <div className="collapse__apartement">
-        <Collapse title="Description" content={logement.description} />
+        <Collapse
+          title="Description"
+          content={logement.description}
+          size={size}
+        />
 
-        <Collapse title="Equipements" content={logement.equipments} />
+        <Collapse
+          title="Equipements"
+          content={logement.equipments}
+          size={size}
+        />
       </div>
       <Footer />
     </>

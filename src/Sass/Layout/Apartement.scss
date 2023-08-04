@@ -30,14 +30,20 @@
   }
 
   .apartement__container {
-    width: 80%;
+    width: 86%;
     padding: 20px 0px;
   }
   .apartement__container h2 {
-    font-size: 33px;
+    font-size: $font-size-l;
   }
   .apartement__container p {
     font-size: 16px;
     margin: 10px 0px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .apartement__container h2 {
+    font-size: $font-size-xl;
   }
 }
