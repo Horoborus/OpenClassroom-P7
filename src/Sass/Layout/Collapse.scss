@@ -57,24 +57,29 @@
   gap: 20px;
   padding: 13px 13px 20px 13px;
 }
+//liste de equipement du Apartment
+.collapse__bar-content.same ul {
+  margin: 12px 0px;
+}
 
-// Media
+// Media Tablette
 
 @media (min-width: 768px) {
   .collapse {
     align-items: center;
 
-    .collapse__container {
+    &__container {
       width: 85%;
       align-items: center;
     }
-    .collapse__bar-content h3 {
+    &__bar-content h3 {
       font-size: 24px;
       font-weight: 500;
     }
-  }
-  .collapse__bar-content.same {
-    height: 170px;
+
+    &__bar-content.same {
+      height: 170px;
+    }
   }
   // Collappse Apartement
   .collapse__apartement {
@@ -84,11 +89,9 @@
     flex-direction: row;
     margin-bottom: 20px;
   }
-  .collapse__container {
-    width: 45%;
-  }
 }
 
+// Media Desktop
 @media (min-width: 1024px) {
   .collapse__bar-content h3 {
     font-size: 18px;
@@ -98,6 +101,9 @@
   }
   .collapse__bar {
     height: 50px;
+  }
+  .collapse__bar-content.same ul {
+    margin: 17px 0px;
   }
   .collapse__bar-title {
     font-size: $font-size-s;

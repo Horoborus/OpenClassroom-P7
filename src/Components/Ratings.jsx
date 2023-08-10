@@ -4,26 +4,30 @@ import React from "react";
 // Importation du fichier de styles Ratings.scss
 import "../Sass/Layout/Ratings.scss";
 
+// Importation des images des etoiles sur le dossier Assets
+import starFill from "../Assets/star-fill.png";
+import starEmpty from "../Assets/star-empty.png";
+
 // Définition du composant fonctionnel Ratings
 function Ratings({ name, picture, rating = 0 }) {
   // Normalisation de la note pour s'assurer qu'elle est comprise entre 0 et 5
   const normalisedRating = Math.min(Math.max(rating, 0), 5);
 
-  // Utilisation de l'unicode pour représenter une étoile remplie (★)
-  const filledStar = "\u2605";
-
   // Création d'un tableau d'étoiles remplies et vides en fonction de la note normalisée
-  const filledStars = Array.from({ length: 5 }, (_, index) => (
-    <span key={index} className={index < normalisedRating ? "filled" : "empty"}>
-      {filledStar}
-    </span>
+  const stars = Array.from({ length: 5 }, (_, index) => (
+    <img
+      src={index < normalisedRating ? starFill : starEmpty} // Utilisation des images importées
+      key={index}
+      className={index < normalisedRating ? "filled" : "empty"}
+      alt=""
+    />
   ));
 
   // Retourne le JSX représentant le contenu du composant Ratings
   return (
     <div className="ratings">
       {/* Conteneur pour afficher les étoiles de notation */}
-      <div className="ratings__stars">{filledStars}</div>
+      <div className="ratings__stars">{stars}</div>
 
       {/* Conteneur pour afficher les informations sur l'utilisateur */}
       <div className="ratings__user">

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "../Sass/Layout/Slider.scss";
+import right from "../Assets/ChevronDroit.png";
+import left from "../Assets/ChevronGauche.png";
 
 function Slider(props) {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -24,9 +26,9 @@ function Slider(props) {
       <div className="carousel__container">
         {/* Condition ternaire pour afficher ou masquer le bouton "Précédent" */}
         {multipleSlides && (
-          <button className="carousel__btn-prev" onClick={goToPreviousSlide}>
-            <p>&lt;</p>
-          </button>
+          <div className="carousel__btn-prev">
+            <img src={left} onClick={goToPreviousSlide} alt="Left Arrow" />
+          </div>
         )}
 
         <img
@@ -37,9 +39,9 @@ function Slider(props) {
 
         {/* Condition ternaire pour afficher ou masquer le bouton "Suivant" */}
         {multipleSlides && (
-          <button className="carousel__btn-next" onClick={goToNextSlide}>
-            <p>&gt;</p>
-          </button>
+          <div className="carousel__btn-next">
+            <img src={right} onClick={goToNextSlide} alt="Right Arrow" />
+          </div>
         )}
       </div>
 

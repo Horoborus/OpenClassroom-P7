@@ -14,7 +14,6 @@
   width: 90%;
   height: 220px;
   justify-content: space-between;
-  background-color: $color-primary;
   border-radius: 10px;
 }
 .carousel__image {
@@ -26,25 +25,27 @@
 
 .carousel__btn-next {
   position: absolute;
-  font-size: 30px;
   color: $only-white;
   cursor: pointer;
   right: 10px;
-  top: 75px;
-  background-color: transparent;
+  top: 100px;
   border: none;
 }
 .carousel__btn-prev {
   position: absolute;
-  font-size: 30px;
   color: $only-white;
   cursor: pointer;
   left: 10px;
-  top: 75px;
-  background-color: transparent;
+  top: 100px;
+
   border: none;
 }
-.carousel__info{
+.carousel__btn-prev img,
+.carousel__btn-next img {
+  height: 40px;
+}
+
+.carousel__info {
   display: none;
   position: absolute;
   bottom: 5px;
@@ -52,7 +53,7 @@
   font-size: 18px;
 }
 
-/* Ajuster le style au différentes tailles d'écran */
+/* Media Tablette */
 
 @media (min-width: 768px) {
   .carousel__container {
@@ -62,13 +63,24 @@
   .carousel__image {
     height: 415px;
   }
-  .carousel__btn-next {
-    top: 170px;
-  }
+  .carousel__btn-next,
   .carousel__btn-prev {
-    top: 170px;
+    top: 200px;
   }
-  .carousel__info{
+
+  .carousel__info {
     display: block;
+  }
+}
+/* Media Desktop */
+@media (min-width: 1024px) {
+  .carousel__btn-next,
+  .carousel__btn-prev {
+    top: 180px;
+  }
+
+  .carousel__btn-prev img,
+  .carousel__btn-next img {
+    height: 80px;
   }
 }
