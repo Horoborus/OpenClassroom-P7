@@ -1,0 +1,29 @@
+.filters {
+  display: flex;
+}
+.filters__container {
+  display: flex;
+  width: 100%;
+}
+.filters__container p {
+  display: flex;
+  font-weight: 500;
+  font-size: 10px;
+  width: 85px;
+  margin-right: 5px;
+  border-radius: 5px;
+  height: 20px;
+  background-color: #ff6060;
+  color: #f7f7f7;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .filters__container p {
+    width: 23%;
+    height: 25px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+}/*# sourceMappingURL=Filters.css.map */

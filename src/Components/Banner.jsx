@@ -5,14 +5,16 @@ import React from "react";
 import "../Sass/Layout/Banner.scss";
 
 const Banner = ({ image, title, size }) => {
+  const jumpLine = title.replace(/,/g, ",\n");
+
   return (
     <div className="banner">
-      <div className={`banner__background ${size}`}>
+      <div className={`banner__background `}>
         <div className="banner__background-image">
           <img src={image} className={size} alt="Banner" />
         </div>
       </div>
-      {!title ? null: <h1>{title}</h1>}
+      <h1>{jumpLine}</h1>
     </div>
   );
 };

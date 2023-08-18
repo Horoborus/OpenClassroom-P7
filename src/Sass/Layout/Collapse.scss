@@ -36,7 +36,7 @@
     }
     &-content li {
       list-style: none;
-      font-size: 12px;
+      font-size: $font-size-xs;
       padding: 1px 0;
     }
   }
@@ -73,7 +73,7 @@
       align-items: center;
     }
     &__bar-content h3 {
-      font-size: 24px;
+      font-size: $font-size-s;
       font-weight: 500;
     }
 
@@ -88,6 +88,9 @@
     justify-content: space-between;
     flex-direction: row;
     margin-bottom: 20px;
+  }
+  .collapse__bar-content li {
+    font-size: $font-size-s;
   }
 }
 

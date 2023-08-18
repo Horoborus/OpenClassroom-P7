@@ -2,6 +2,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+// importation des composants des pages
 import ApartmentPage from "./Pages/Apartment.jsx";
 import AboutPage from "./Pages/About.jsx";
 import HomePage from "./Pages/Home.jsx";

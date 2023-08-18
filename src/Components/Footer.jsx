@@ -22,10 +22,10 @@ function Footer() {
       </div>
 
       {/* Conteneur pour afficher les droits d'auteur */}
-      <div className="footer__rights"></div>
-
-      {/* Affichage de l'image des droits d'auteur */}
-      <img src={require("../Assets/Kasa-rights-reserved.png")} alt="" />
+      <div className="footer__rights">
+        {/* Affichage de l'image des droits d'auteur */}
+        <img src={require("../Assets/Kasa-rights-reserved.png")} alt="" />
+      </div>
     </div>
   );
 }

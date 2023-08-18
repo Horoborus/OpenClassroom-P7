@@ -38,18 +38,12 @@
     font-size: 24px;
     line-height: 100%;
     color: $only-white;
-    text-align: start;
-    width: 80%;
+    width: 60%;
     top: 15px;
+    white-space: pre-line;
   }
 }
 
-@media (min-width: 350px) {
-  .banner h1 {
-    text-align: start;
-    top: 10%;
-  }
-}
 /* Media Tablete */
 @media (min-width: 620px) {
   .banner {
@@ -65,6 +59,8 @@
       font-size: $font-size-xl;
       text-align: center;
       top: 10%;
+      white-space: unset;
+      width: 100%;
     }
   }
 }

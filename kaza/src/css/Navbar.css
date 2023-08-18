@@ -1,0 +1,108 @@
+@charset "UTF-8";
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  height: 110px;
+  width: 90%;
+  position: relative;
+  /* Media Tablette */
+}
+.nav__logo img {
+  width: 150px;
+  height: 50px;
+}
+.nav .nav__btn {
+  display: none;
+}
+.nav .nav__links {
+  display: inline;
+  float: right;
+  font-size: 14px;
+  /* Style for the active link when clicked */
+}
+.nav .nav__links a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #ff6060;
+  text-transform: uppercase;
+}
+.nav .nav__links a.active {
+  text-decoration: underline;
+  color: #ff6060; /* Text color for the active link when clicked */
+}
+@media (max-width: 374px) {
+  .nav .nav__btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 25px;
+  }
+  .nav .nav__btn label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav .nav__btn label span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: #ff6060; /* Background color for the hamburger lines */
+    margin: 6px 0;
+  }
+  .nav .nav__links {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    background: #f7f7f7; /* Background color for the dropdown menu */
+    height: 140px;
+    top: 80px;
+    left: 0px;
+    transition: all 0.3s;
+    /* Afficher le menu déroulant lorsque le menu hamburger est actif */
+  }
+  .nav .nav__links a {
+    display: flex;
+    padding: 20px 0px 20px 30px;
+    text-decoration: none;
+  }
+  .nav .nav__links.active {
+    display: block;
+    animation: logIn 0.3s ease-in;
+  }
+  .nav .nav__links.inactive {
+    display: none;
+    animation: logOut 0.3s ease-out;
+  }
+  @keyframes logIn {
+    0% {
+      opacity: 0;
+      transform: rotateX(-90deg);
+    }
+    50% {
+      transform: rotateX(-20deg);
+    }
+    100% {
+      opacity: 1;
+      transform: rotateX(0deg);
+    }
+  }
+  @keyframes logOut {
+    from {
+      opacity: 1;
+      transform: rotateX(0deg);
+    }
+    to {
+      opacity: 0;
+      transform: rotateX(90deg);
+    }
+  }
+}
+@media (min-width: 768px) {
+  .nav .nav__links a {
+    text-transform: none;
+  }
+}/*# sourceMappingURL=Navbar.css.map */

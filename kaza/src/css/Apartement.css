@@ -1,0 +1,45 @@
+.apartement {
+  padding: 0 5%;
+}
+
+.apartement__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.apartement__container h2 {
+  color: #ff6060;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  margin: 5px 0px;
+}
+.apartement__container p {
+  color: #ff6060;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin: 5px 0px;
+}
+
+@media (min-width: 768px) {
+  .apartement {
+    display: flex;
+  }
+  .apartement__container {
+    width: 86%;
+    padding: 20px 0px;
+  }
+  .apartement__container h2 {
+    font-size: 24px;
+  }
+  .apartement__container p {
+    font-size: 16px;
+    margin: 10px 0px;
+  }
+}
+@media (min-width: 1440px) {
+  .apartement__container h2 {
+    font-size: 36px;
+  }
+}/*# sourceMappingURL=Apartement.css.map */
