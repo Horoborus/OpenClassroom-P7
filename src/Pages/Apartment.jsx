@@ -8,6 +8,7 @@ import "../Sass/Layout/Apartement.scss";
 import Filters from "../Components/Filters";
 import Ratings from "../Components/Ratings";
 import Collapse from "../Components/Collapse";
+import Wrapper from "../Components/Wrapper";
 
 const ApartmentPage = () => {
   const { id } = useParams();
@@ -34,38 +35,40 @@ const ApartmentPage = () => {
 
   return (
     <>
-      <Navbar />
-      {logement.pictures && logement.pictures.length > 0 ? (
-        <Slider images={logement.pictures} />
-      ) : (
-        <p>Images pas disponibles</p>
-      )}
-      <div className="apartement">
-        <div className="apartement__container">
-          <h2>{logement.title}</h2>
-          <p>{logement.location}</p>
+      <Wrapper>
+        <Navbar />
+        {logement.pictures && logement.pictures.length > 0 ? (
+          <Slider images={logement.pictures} />
+        ) : (
+          <p>Images pas disponibles</p>
+        )}
+        <div className="apartement">
+          <div className="apartement__container">
+            <h2>{logement.title}</h2>
+            <p>{logement.location}</p>
 
-          <Filters tags={logement.tags} />
+            <Filters tags={logement.tags} />
+          </div>
+          <Ratings
+            name={logement.host.name}
+            picture={logement.host.picture}
+            rating={logement.rating}
+          />
         </div>
-        <Ratings
-          name={logement.host.name}
-          picture={logement.host.picture}
-          rating={logement.rating}
-        />
-      </div>
-      <div className="collapse__apartement">
-        <Collapse
-          title="Description"
-          content={logement.description}
-          size={size}
-        />
+        <div className="collapse__apartement">
+          <Collapse
+            title="Description"
+            content={logement.description}
+            size={size}
+          />
 
-        <Collapse
-          title="Equipements"
-          content={logement.equipments}
-          size={size}
-        />
-      </div>
+          <Collapse
+            title="Equipements"
+            content={logement.equipments}
+            size={size}
+          />
+        </div>
+      </Wrapper>
       <Footer />
     </>
   );

@@ -5,6 +5,7 @@ import Footer from "../Components/Footer.jsx";
 import Card from "../Components/Card.jsx";
 import bannerImage from "../Assets/BackgroundHome.jpg";
 import { Link } from "react-router-dom";
+import Wrapper from "../Components/Wrapper.jsx";
 
 const HomePage = () => {
   const bannerTitle = "Chez vous, partout et ailleurs";
@@ -25,21 +26,23 @@ const HomePage = () => {
 
   return (
     <>
-      <Navbar />
-      <Banner image={bannerImage} title={bannerTitle} />
-      <div className="card">
-        <div className="card__background">
-          {logements.map((logement) => (
-            <Link
-              to={`/logement/${logement.id}`}
-              className="card__contain"
-              key={logement.id}
-            >
-              <Card title={logement.title} ImageUrl={logement.cover} />
-            </Link>
-          ))}
+      <Wrapper>
+        <Navbar />
+        <Banner image={bannerImage} title={bannerTitle} />
+        <div className="card">
+          <div className="card__background">
+            {logements.map((logement) => (
+              <Link
+                to={`/logement/${logement.id}`}
+                className="card__contain"
+                key={logement.id}
+              >
+                <Card title={logement.title} ImageUrl={logement.cover} />
+              </Link>
+            ))}
+          </div>
         </div>
-      </div>
+      </Wrapper>
       <Footer />
     </>
   );

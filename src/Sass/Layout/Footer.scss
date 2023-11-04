@@ -1,7 +1,7 @@
 @import "../Utils/Variables.scss";
 
 .footer {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
@@ -13,9 +13,24 @@
     height: 40px;
     width: 150px;
   }
-  &__rights img {
-    height: 40px;
-    width: 230px;
-    object-fit: contain;
+  &__rights-description {
+    font-family: Montserrat;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer__rights-description {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
   }
 }

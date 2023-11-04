@@ -54,6 +54,14 @@
     object-fit: cover;
   }
 }
+
+@media (min-width: 320px) {
+  .card__container h2 {
+    font-size: $font-size-s;
+    top: 182px;
+  }
+}
+
 /* Tablette */
 @media (min-width: 700px) {
   .card {
@@ -95,8 +103,10 @@
     width: 100%;
   }
 }
-@media (min-width: 1024px) {
-  .card__background {
-    gap: 1.6vw;
+
+@media (min-width: 1440px) {
+  .card__container h2 {
+    font-size: $font-size-m;
+    top: 180px;
   }
 }

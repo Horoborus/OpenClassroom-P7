@@ -10,7 +10,7 @@
   position: relative;
 
   &__logo img {
-    width: 150px;
+    width: 140px;
     height: 50px;
   }
 
@@ -21,7 +21,7 @@
   .nav__links {
     display: inline;
     float: right;
-    font-size: $font-size-s;
+    font-size: $font-size-xs;
 
     a {
       display: inline-block;
@@ -29,6 +29,7 @@
       text-decoration: none;
       color: $color-primary;
       text-transform: uppercase;
+      font-weight: 500;
     }
 
     /* Style for the active link when clicked */
@@ -83,8 +84,8 @@
         animation: logIn 0.3s ease-in;
       }
       &.inactive {
+        animation: LogOut 0.3s ease-in-out;
         display: none;
-        animation: logOut 0.3s ease-out;
       }
     }
     @keyframes logIn {
@@ -100,21 +101,35 @@
         transform: rotateX(0deg);
       }
     }
-    @keyframes logOut {
-      from {
-        opacity: 1;
-        transform: rotateX(0deg);
-      }
-      to {
-        opacity: 0;
-        transform: rotateX(90deg);
-      }
+  }
+  @keyframes LogOut {
+    0% {
+      opacity: 1;
+      transform: rotateX(0deg);
+    }
+    50% {
+      transform: rotateX(-20deg);
+    }
+    100% {
+      opacity: 0;
+      transform: rotateX(-90deg);
+    }
+  }
+  @media (min-width: 425px) {
+    .nav__links a {
+      font-size: $font-size-s;
     }
   }
   /* Media Tablette */
   @media (min-width: 768px) {
     .nav__links a {
       text-transform: none;
+      font-size: $font-size-m;
+    }
+  }
+  @media (min-width: 1024px) {
+    .nav__links a {
+      font-size: $font-size-l;
     }
   }
 }

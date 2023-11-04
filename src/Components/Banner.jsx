@@ -9,8 +9,8 @@ const Banner = ({ image, title, size }) => {
 
   return (
     <div className="banner">
-      <div className={`banner__background `}>
-        <div className="banner__background-image">
+      <div className={`banner__background ${size}`}>
+        <div className={`banner__background-image ${size}`}>
           <img src={image} className={size} alt="Banner" />
         </div>
       </div>

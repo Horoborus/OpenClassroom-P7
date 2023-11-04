@@ -1,0 +1,13 @@
+@import "../Utils/Variables.scss";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 220px);
+}
+
+@media (min-width: 2560px) {
+  .wrapper {
+    padding: 0 10%;
+  }
+}

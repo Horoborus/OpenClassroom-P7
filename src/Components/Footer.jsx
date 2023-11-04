@@ -24,7 +24,9 @@ function Footer() {
       {/* Conteneur pour afficher les droits d'auteur */}
       <div className="footer__rights">
         {/* Affichage de l'image des droits d'auteur */}
-        <img src={require("../Assets/Kasa-rights-reserved.png")} alt="" />
+        <h3 className="footer__rights-description">
+          &copy; 2020 Kasa. All rights reserved
+        </h3>
       </div>
     </div>
   );
